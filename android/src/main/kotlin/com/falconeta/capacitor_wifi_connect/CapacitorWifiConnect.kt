@@ -457,7 +457,7 @@ class CapacitorWifiConnect(context: Context) : LifecycleObserver {
     }
     val request = NetworkRequest.Builder()
       .addTransportType(NetworkCapabilities.TRANSPORT_WIFI)
-      .removeCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET)
+      .addCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET)
       .setNetworkSpecifier(specifier)
       .build()
 
